@@ -8,7 +8,9 @@ import Loader from '../../ui-component/Loader';
 const DockerList = () => {
   const [containers, setContainers] = useState([]);
   const [loader, setLoader] = useState(false);
-
+  useEffect(() => {
+    getContainers();
+  }, []);
   const getContainers = () => {
     restService
       .get('docker/get-containers', setLoader)
@@ -32,9 +34,6 @@ const DockerList = () => {
         alert('error');
       });
   }
-  useEffect(() => {
-    getContainers();
-  }, []);
 
   return (
     <>
