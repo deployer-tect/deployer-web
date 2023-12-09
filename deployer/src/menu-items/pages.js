@@ -1,9 +1,9 @@
 // assets
-import { IconKey } from '@tabler/icons';
+import { IconHome } from '@tabler/icons';
 
 // constant
 const icons = {
-  IconKey
+  IconHome
 };
 
 // ==============================|| EXTRA PAGES MENU ITEMS ||============================== //
@@ -15,11 +15,10 @@ const pages = {
   type: 'group',
   children: [
     {
-      id: 'authentication',
-      title: 'Authentication',
+      id: 'docker',
+      title: 'Docker',
       type: 'collapse',
-      icon: icons.IconKey,
-
+      icon: icons.IconHome,
       children: [
         {
           id: 'login3',
