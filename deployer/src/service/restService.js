@@ -1,7 +1,8 @@
 export const backendUrl = 'https://d1b1-88-227-65-85.ngrok-free.app/';
+const TRUE_VALUE = true;
 export default class RestService {
   get(urlPart, setLoader) {
-    setLoader(true);
+    setLoader(TRUE_VALUE);
     return new Promise((resolve, reject) => {
       fetch(backendUrl + urlPart, {
         method: 'GET',
