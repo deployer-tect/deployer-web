@@ -1,6 +1,6 @@
-export const backendUrl = "http://localhost:5051/";
+export const backendUrl = 'https://d1b1-88-227-65-85.ngrok-free.app/';
 export default class RestService {
-  get(urlPart,setLoader) {
+  get(urlPart, setLoader) {
     setLoader(true);
     return new Promise((resolve, reject) => {
       fetch(backendUrl + urlPart, {
@@ -21,7 +21,7 @@ export default class RestService {
         });
     });
   }
-  post(urlPart, body,setLoader) {
+  post(urlPart, body, setLoader) {
     return new Promise((resolve, reject) => {
       fetch(backendUrl + urlPart, {
         method: 'POST',
